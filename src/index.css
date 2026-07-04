@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #FAF7F3;
+  --linen: #F2EBE0;
+  --nude: #E8D9C8;
+  --clay: #B07A5A;
+  --cocoa: #6B3F28;
+  --dark: #2C1A10;
+  --mid: #9A7860;
+  --muted: #C4AE9A;
+  --line: rgba(176,122,90,0.2);
+  --glow: rgba(176,122,90,0.08);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-linen: var(--linen);
+  --color-nude: var(--nude);
+  --color-clay: var(--clay);
+  --color-cocoa: var(--cocoa);
+  --color-dark: var(--dark);
+  --color-mid: var(--mid);
+  --color-muted-ink: var(--muted);
+  --font-display: "Playfair Display", serif;
+  --font-serif-italic: "Cormorant", serif;
+  --font-sans: "Jost", sans-serif;
+}
+
+* { border-color: var(--line); }
+
+html, body {
+  background: var(--paper);
+  color: var(--dark);
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+.font-display { font-family: "Playfair Display", serif; }
+.font-serif-italic { font-family: "Cormorant", serif; font-style: italic; }
+.font-sans { font-family: "Jost", sans-serif; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { opacity: 0; }
+.fade-up.in { animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+@keyframes softPulse {
+  0%, 100% { box-shadow: 0 8px 32px rgba(176,122,90,0.4), 0 0 0 0 rgba(176,122,90,0.35); }
+  50% { box-shadow: 0 8px 32px rgba(176,122,90,0.5), 0 0 0 14px rgba(176,122,90,0); }
+}
+.wa-pulse { animation: softPulse 2s infinite; }
+
+@keyframes lineGrow {
+  from { width: 0; }
+  to { width: 80px; }
+}
+.line-grow.in { animation: lineGrow 1.2s ease forwards; }
+
+.arrow-slide { display: inline-block; transition: transform 300ms ease; }
+.group:hover .arrow-slide, a:hover > .arrow-slide, button:hover > .arrow-slide { transform: translateX(6px); }
+
+::selection { background: var(--clay); color: var(--paper); }
