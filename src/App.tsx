@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 
 // ============ IMAGES ============
 const IMG = {
-  limpeza: "/__l5e/assets-v1/b2670a3f-b16a-4b86-94e7-6d0542515650/image.png",
-  labial1: "/__l5e/assets-v1/d039f7c6-73bc-49fe-b846-c393a0d553b0/image-2.png",
-  labial2: "/__l5e/assets-v1/c6afd2ef-0496-4699-b7b8-f0876daecf94/image-3.png",
-  labial3: "/__l5e/assets-v1/369b1c85-1f6f-42cd-b1c0-6e32c9c87b8f/image-4.png",
-  acne: "/__l5e/assets-v1/040d1ccb-9f0d-4466-b099-27319b22354c/image-5.png",
-  retrato: "/__l5e/assets-v1/a1ed25f9-7935-4566-8eab-e7e3e6fa0ffd/image-6.png",
-  micro: "/__l5e/assets-v1/2909f0eb-3ef0-4895-8f87-a3da8ba4cf8d/image-7.png",
-  belotero: "/__l5e/assets-v1/30064067-4bbe-4b8c-a5db-1c34c28b7be0/image-8.png",
+  limpeza: "/fotos/image.png",
+  labial1: "/fotos/image-2.png",
+  labial2: "/fotos/image-3.png",
+  labial3: "/fotos/image-4.png",
+  acne: "/fotos/image-5.png",
+  retrato: "/fotos/image-6.png",
+  micro: "/fotos/image-7.png",
+  belotero: "/fotos/image-8.png",
 };
 
 const WHATSAPP = "https://wa.me/5561999360811?text=Ol%C3%A1%20Val%C3%A9ria%2C%20gostaria%20de%20agendar%20uma%20consulta.";
