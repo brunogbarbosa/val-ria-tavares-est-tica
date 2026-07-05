@@ -169,7 +169,7 @@ function Hero() {
   return (
     <section
       id="top"
-      className="relative flex flex-col md:flex-row items-center px-6 md:px-16 min-h-screen pt-32 md:pt-24 pb-16"
+      className="relative flex flex-col md:flex-row items-center px-6 md:px-16 min-h-[88vh] pt-28 md:pt-28 pb-20"
       style={{ background: "linear-gradient(180deg, rgba(245,230,224,0.35) 0%, rgba(245,230,224,0.15) 100%)" }}
     >
       <div className="w-full md:w-1/2 z-10 max-w-[620px] fade-up">
